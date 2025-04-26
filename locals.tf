@@ -1,7 +1,7 @@
 locals {
   keycloak_realm_settings = {
-    display_name               = "Necronizer's Cloud"
-    application_name           = "cloud"
+    display_name               = "YASM Media"
+    application_name           = "yasm"
     base_url                   = var.keycloak_authentication_base_url
     valid_login_redirect_path  = var.keycloak_authentication_valid_login_redirect_path
     valid_logout_redirect_path = var.keycloak_authentication_valid_logout_redirect_path
