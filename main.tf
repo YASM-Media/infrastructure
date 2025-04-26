@@ -15,8 +15,8 @@ module "minio" {
   domain              = var.domain
   cluster_issuer_name = module.cluster-issuer.cluster-issuer-name
   operator_namespace  = module.helm.minio-operator-namespace
-  users               = ["cloud"]
-  buckets             = ["cloud"]
+  users               = ["yasm"]
+  buckets             = ["yasm"]
 }
 
 module "cnpg" {
@@ -28,9 +28,9 @@ module "cnpg" {
   backup_bucket_name                = module.minio.postgres-backup-bucket
   clients = [
     {
-      namespace          = "cloud"
-      user               = "cloud"
-      database           = "cloud"
+      namespace          = "backend"
+      user               = "yasm"
+      database           = "yasm"
       derRequired        = false
       privateKeyEncoding = "PKCS1"
     }
